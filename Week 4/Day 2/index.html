@@ -9,39 +9,61 @@
 </head>
 
 <body>
-    <h1>HTML & CSS Quiz</h1>
+    <header>
+        <h1>HTML & CSS Quiz</h1>
+    </header>
 
-    <div id="q1Choices"><label>"What does HTML stand for?"<br>
-        </label>
-    </div>
+    <form id="quiz">
+        <div id="q1Choices" class="question">
+            <label>"What does HTML stand for?"<br></label>
+            <div class="choice-list"></div>
+            <p class="feedback" id="feedback1"></p>
+        </div>
 
 
-    <div id="textChoice">
-        <label>"What color is the sky?"
-            <br>
-            <input type="text" id="textInput">
-        </label>
-    </div>
+        <div id="textChoice" class="question">
+            <label>"What color is the sky?"
+                <br>
+                <input type="text" id="textInput">
+                <p class="feedback" id="feedback2"></p>
+            </label>
+        </div>
 
-    <div id="selectChoice">
-        <label>"What month is it?"
-            <br>
-            <select id="selectInput">
-                <option> October </option>
-                <option> November </option>
-                <option> September </option>
-            </select>
-        </label>
-    </div>
+        <div id="selectChoice" class="question">
+            <label>"What month is it?"
+                <br>
+                <select id="selectInput">
+                    <option> October </option>
+                    <option> November </option>
+                    <option> September </option>
+                </select>
+                <p class="feedback" id="feedback3"></p>
+            </label>
+        </div>
 
-    <div id="numberInput">
-        <label>"What's 2 + 2?"<br>
-            <input type="number" id="numberInput">
-        </label>
-    </div>
+        <div id="numberChoice" class="question">
+            <label>
+                "What's 2 + 2?"<br>
+                <input type="number" id="numberInput">
+            </label>
+            <p class="feedback" id="feedback4"></p>
+        </div>
 
-    <button>Submit</button>
+        <div id="checkInput" class="question">
+            <label>"Which are CSS properties (more than one answer)"<br>
+                <label><input type="checkbox" name="q5" value="color">color</label>
+                <label><input type="checkbox" name="q5" value="size">size</label>
+                <label><input type="checkbox" name="q5" value="squid">squid</label>
+            </label>
+            <p class="feedback" id="feedback5"></p>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+
+    <section id="results" class="results" aria-live="polite" hidden></section>
+    <p class="attempts">Times taken: <strong id="attemptCount">0</strong></p>
     <script src="js/script.js" defer></script>
+
 
 </body>
 
