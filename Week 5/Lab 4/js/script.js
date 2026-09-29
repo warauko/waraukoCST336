@@ -37,5 +37,10 @@ async function suggestPassword() {
     });
 }
 
+async function usernameCheck() {
+    let usernames = await fetch("https://csumb.space/api/usernamesAPI.php?username=eeny");
+    let button = doc
+}
+
 loadCityValues()
 suggestPassword()
